@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dlunwjbyi1s1i"]
+
+[ext_resource type="Script" uid="uid://bicawnb55t6qq" path="res://scripts/card.gd" id="1_yiag5"]
+
+[node name="Card" type="Button" unique_id=1058770777]
+custom_minimum_size = Vector2(200, 234)
+script = ExtResource("1_yiag5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1856026830]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CardValue" type="Label" parent="VBoxContainer" unique_id=1604326908]
+layout_mode = 2
+
+[node name="CardName" type="Label" parent="VBoxContainer" unique_id=1651420285]
+layout_mode = 2

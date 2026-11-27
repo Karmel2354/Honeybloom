@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://155xx7s6y6ta"]
+
+[ext_resource type="Script" uid="uid://bl6gmiv8i1sj2" path="res://scripts/main.gd" id="1_elqb8"]
+[ext_resource type="Shader" uid="uid://c7dyv8jfy76kr" path="res://assets/blur.gdshader" id="2_0bbpv"]
+[ext_resource type="Texture2D" uid="uid://c05kih8i4knb4" path="res://assets/background_edited.jpg" id="2_rvslj"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bhunq"]
+shader = ExtResource("2_0bbpv")
+shader_parameter/blur_amount = 0.90000004275
+
+[node name="Main" type="Control" unique_id=1582818605]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_elqb8")
+
+[node name="Background" type="TextureRect" parent="." unique_id=303213642]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_rvslj")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=465596779]
+material = SubResource("ShaderMaterial_bhunq")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Deck" type="Button" parent="." unique_id=875286229]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -150.0
+offset_right = 110.0
+offset_bottom = -30.0
+grow_vertical = 0
+
+[node name="Hand" type="HBoxContainer" parent="." unique_id=747103634]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -550.0
+offset_top = -264.0
+offset_right = 550.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Info" type="Label" parent="." unique_id=1067926800]
+modulate = Color(1, 0, 0.6392157, 0.93333334)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
