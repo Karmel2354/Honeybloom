@@ -2,7 +2,13 @@
 
 [ext_resource type="Script" uid="uid://bl6gmiv8i1sj2" path="res://scripts/main.gd" id="1_elqb8"]
 [ext_resource type="Shader" uid="uid://c7dyv8jfy76kr" path="res://assets/blur.gdshader" id="2_0bbpv"]
+[ext_resource type="Texture2D" uid="uid://cbinrla8bgqaj" path="res://assets/cards/colourdeckbuilder_cardart-batch1.png" id="2_q8u5g"]
 [ext_resource type="Texture2D" uid="uid://c05kih8i4knb4" path="res://assets/background_edited.jpg" id="2_rvslj"]
+[ext_resource type="Texture2D" uid="uid://ce1nkte6eypg2" path="res://assets/cards/colourdeckbuilder_cardart-batch2.png" id="3_lhr70"]
+[ext_resource type="Texture2D" uid="uid://07ae8g3x77mj" path="res://assets/cards/colourdeckbuilder_cardart-batch3.png" id="4_wp0k4"]
+[ext_resource type="Texture2D" uid="uid://h7geq40q8cv7" path="res://assets/cards/colourdeckbuilder_cardart-batch4.png" id="5_bjd11"]
+[ext_resource type="Texture2D" uid="uid://peqsprndb0m" path="res://assets/cards/colourdeckbuilder_cardart-batch5.png" id="6_qmy6f"]
+[ext_resource type="Texture2D" uid="uid://bvqu7siwonqj8" path="res://assets/cards/colourdeckbuilder_cardart-batch6.png" id="7_mwfav"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_bhunq"]
 shader = ExtResource("2_0bbpv")
@@ -17,6 +23,7 @@ offset_right = -1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_elqb8")
+master_sheets = Array[Texture2D]([ExtResource("2_q8u5g"), ExtResource("3_lhr70"), ExtResource("4_wp0k4"), ExtResource("5_bjd11"), ExtResource("6_qmy6f"), ExtResource("7_mwfav")])
 
 [node name="Background" type="TextureRect" parent="." unique_id=303213642]
 layout_mode = 1
@@ -41,14 +48,14 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 
-[node name="Deck" type="Button" parent="." unique_id=875286229]
+[node name="DrawPile" type="Button" parent="." unique_id=875286229]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 30.0
 offset_top = -150.0
-offset_right = 110.0
+offset_right = 130.0
 offset_bottom = -30.0
 grow_vertical = 0
 
@@ -72,3 +79,17 @@ modulate = Color(1, 0, 0.6392157, 0.93333334)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
+
+[node name="DiscardPile" type="Button" parent="." unique_id=1594138061]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -110.0
+offset_top = -150.0
+offset_right = -10.0
+offset_bottom = -30.0
+grow_horizontal = 0
+grow_vertical = 0
